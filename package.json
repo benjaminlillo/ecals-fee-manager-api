@@ -1,0 +1,20 @@
+{
+  "name": "ecals-fee-manager-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/benjaminlillo/ecals-fee-manager-api.git",
+  "author": "Benjamín Lillo <benjalso99@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@koa/cors": "^4.0.0",
+    "koa": "^2.14.1",
+    "koa-body": "^6.0.1",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^12.0.0",
+    "nodemon": "^2.0.20"
+  },
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  }
+}
