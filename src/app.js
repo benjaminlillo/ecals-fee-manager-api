@@ -3,17 +3,18 @@ const KoaLogger = require('koa-logger');
 const { koaBody } = require('koa-body');
 const router = require('./routes');
 const cors = require('@koa/cors');
-
-const PORT = '3000'
+const orm = require('./models')
 
 const app = new Koa();
 
 app.use(cors());
+
+app.context.orm = orm;
+
 app.use(KoaLogger());
 app.use(koaBody());
 
 app.use(router.routes());
 
-app.listen(PORT, () => {
-  console.log(`Starting app in port ${PORT}`);
-});
+
+module.exports = app;
